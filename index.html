@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysioSárvár – Open Gym | Sárvár Legnagyobb Edzőterme</title>
+    <meta name="description" content="Sárvár legnagyobb gépesített edzőterme 500 m²-en. Open Gym, csoportos foglalkozások, személyi edzés. Minden nap 05:00–22:00.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+
+<!-- ============================================================
+     MOBILE MENU OVERLAY
+============================================================ -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+    <a href="#about"       onclick="closeMobile()">Rólunk</a>
+    <a href="#classes"     onclick="closeMobile()">Foglalkozások</a>
+    <a href="#pricing"     onclick="closeMobile()">Árak</a>
+    <a href="#schedule"    onclick="closeMobile()">Órarend</a>
+    <a href="#contact"     onclick="closeMobile()">Kapcsolat</a>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<nav id="navbar">
+    <div class="container nav-inner">
+        <a href="#" class="logo">PHYSIO<em>SÁRVÁR</em></a>
+        <ul class="nav-links">
+            <li><a href="#about">Rólunk</a></li>
+            <li><a href="#classes">Foglalkozások</a></li>
+            <li><a href="#pricing">Árak</a></li>
+            <li><a href="#schedule">Órarend</a></li>
+            <li><a href="#contact">Kapcsolat</a></li>
+            <li><a href="#contact" class="nav-cta">Bérlet vásárlás</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="hero" id="home">
+    <div class="hero-media">
+        <div class="hero-bg-img"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <div class="hero-eyebrow">Sárvár Legnagyobb Edzőterme</div>
+        <h1 class="hero-title">
+            EDDZÉL<br><em>SZABADON</em><br><span class="outline">MINDEN NAP</span>
+        </h1>
+        <p class="hero-sub">
+            500 m² korszerű géppark, csoportos edzések és rugalmas nyitvatartás — 
+            mert a jó edzőterem alkalmazkodik hozzád, nem fordítva.
+        </p>
+        <div class="hero-actions">
+            <a href="#pricing" class="btn-primary">
+                <i class="fas fa-ticket"></i>
+                Bérletek &amp; Árak
+            </a>
+            <a href="#about" class="btn-outline">
+                <i class="fas fa-play"></i>
+                Tudj meg többet
+            </a>
+        </div>
+    </div>
+
+    <div class="scroll-hint">
+        <span>Görgess</span>
+        <div class="line"></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     STATS STRIP
+============================================================ -->
+<div class="stats-strip">
+    <div class="stats-inner">
+        <div class="stat-cell">
+            <div class="stat-num" data-target="500">500 m²</div>
+            <div class="stat-lbl">Edzőterület</div>
+        </div>
+        <div class="stat-cell">
+            <div class="stat-num" data-target="17">05:00 - 22:00</div>
+            <div class="stat-lbl">Nyitvatartás</div>
+        </div>
+        <div class="stat-cell">
+            <div class="stat-num" data-target="7">7</div>
+            <div class="stat-lbl">Nap / Hetente</div>
+        </div>
+        <div class="stat-cell">
+            <div class="stat-num">60+</div>
+            <div class="stat-lbl">Gép &amp; Eszköz</div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================
+     ABOUT
+============================================================ -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-visual reveal">
+                <img
+                    src="https://images.unsplash.com/photo-1534438327859-4244b6b4e370?w=900&q=85&auto=format&fit=crop"
+                    alt="PhysioSárvár edzőterem belső"
+                    class="about-img-main"
+                >
+                <img
+                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80&auto=format&fit=crop"
+                    alt="Súlyzók"
+                    class="about-img-float"
+                >
+                <div class="about-badge">
+                    <div class="about-badge-num">2024</div>
+                    <div class="about-badge-txt">Open Gym megnyitó</div>
+                </div>
+            </div>
+
+            <div class="about-text">
+                <div class="section-tag reveal">Rólunk</div>
+                <h2 class="section-title reveal">SÁRVÁR LEGJOBB<br>EDZŐTERME</h2>
+                <p class="section-subtitle reveal">
+                    2024 júliustól egy teljesen felújított, 500 m²-es edzőteremmel várjuk tagjainkat. 
+                    Modern géppark, profi csoportos foglalkozások, és olyan nyitvatartás, 
+                    ami tényleg igazodik az életedhez.
+                </p>
+
+                <div class="features-list">
+                    <div class="feat reveal delay-1">
+                        <div class="feat-icon"><i class="fas fa-dumbbell"></i></div>
+                        <div>
+                            <div class="feat-h">Modern Géppark</div>
+                            <div class="feat-p">60+ korszerű kardió és erőgép, szabad súlyok és funkcionális edzőterület, kezdőktől profikig mindenki számára tökéletes.</div>
+                        </div>
+                    </div>
+                    <div class="feat reveal delay-2">
+                        <div class="feat-icon"><i class="fas fa-users"></i></div>
+                        <div>
+                            <div class="feat-h">Csoportos Foglalkozások</div>
+                            <div class="feat-p">Jógától a HIIT-ig, Pilates-től a Body Pump-ig — változatos csoportos edzések tapasztalt oktatókkal, inspiráló közegben.</div>
+                        </div>
+                    </div>
+                    <div class="feat reveal delay-3">
+                        <div class="feat-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <div class="feat-h">05:00 – 22:00 Nyitva</div>
+                            <div class="feat-p">Reggeli korai edzés vagy esti feltöltődés — minden nap, az egész héten nyitva vagyunk, hogy sosem kelljen kihagynod az edzést.</div>
+                        </div>
+                    </div>
+                    <div class="feat reveal delay-4">
+                        <div class="feat-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="feat-h">Könnyen Megközelíthető</div>
+                            <div class="feat-p">Sárvár belvárosában, ingyenes parkolóval. Szaput sétány 2. — egyszerű megtalálni, könnyű visszajönni.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     CLASSES
+============================================================ -->
+<section class="classes" id="classes">
+    <div class="container">
+        <div class="classes-head">
+            <div>
+                <div class="section-tag reveal">Foglalkozások</div>
+                <h2 class="section-title reveal">AMIT KÍNÁLUNK</h2>
+            </div>
+            <a href="#schedule" class="btn-outline reveal">Teljes órarend <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="classes-grid">
+            <div class="class-card reveal">
+                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=700&q=85&auto=format&fit=crop" alt="Open Gym">
+                <div class="class-card-overlay"></div>
+                <div class="class-card-body">
+                    <div class="class-tag">Szabadedzés</div>
+                    <div class="class-name">OPEN GYM</div>
+                    <div class="class-meta">
+                        <i class="fas fa-clock"></i> 05:00 – 22:00 &nbsp;&bull;&nbsp;
+                        <i class="fas fa-calendar"></i> Minden nap
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-card reveal delay-1">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=700&q=85&auto=format&fit=crop" alt="Csoportos edzés">
+                <div class="class-card-overlay"></div>
+                <div class="class-card-body">
+                    <div class="class-tag">Csapat</div>
+                    <div class="class-name">CSOPORTOS EDZÉS</div>
+                    <div class="class-meta">
+                        <i class="fas fa-users"></i> Max. 15 fő &nbsp;&bull;&nbsp;
+                        <i class="fas fa-stopwatch"></i> 45–60 perc
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-card reveal delay-2">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&q=85&auto=format&fit=crop" alt="Személyi edzés">
+                <div class="class-card-overlay"></div>
+                <div class="class-card-body">
+                    <div class="class-tag">Prémium</div>
+                    <div class="class-name">SZEMÉLYI EDZÉS</div>
+                    <div class="class-meta">
+                        <i class="fas fa-user-check"></i> 1-on-1 &nbsp;&bull;&nbsp;
+                        <i class="fas fa-stopwatch"></i> 60–90 perc
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     GALLERY
+============================================================ -->
+<section class="gallery" id="gallery">
+    <div class="container">
+        <div class="gallery-head">
+            <div class="section-tag reveal">Galéria</div>
+            <h2 class="section-title reveal">NÉZD MEG AZ EDZŐTERMÜNKET</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="g-item reveal">
+                <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=1000&q=85&auto=format&fit=crop" alt="Gym floor">
+            </div>
+            <div class="g-item reveal delay-1">
+                <img src="https://images.unsplash.com/photo-1483721310020-03d1b92b3b73?w=700&q=85&auto=format&fit=crop" alt="Workout">
+            </div>
+            <div class="g-item reveal delay-2">
+                <img src="https://images.unsplash.com/photo-1544033527-b192daee1f5b?w=700&q=85&auto=format&fit=crop" alt="Dumbbells">
+            </div>
+            <div class="g-item reveal delay-1">
+                <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=700&q=85&auto=format&fit=crop" alt="Machines">
+            </div>
+            <div class="g-item reveal delay-2">
+                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=700&q=85&auto=format&fit=crop" alt="Dark gym">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     PRICING
+============================================================ -->
+<section class="pricing" id="pricing">
+    <div class="container">
+        <div class="pricing-head">
+            <div class="section-tag reveal">Árak</div>
+            <h2 class="section-title reveal">VÁLASZD A NEKED VALÓT</h2>
+            <p class="section-subtitle reveal" style="max-width:520px;margin:0 auto;">
+                Rugalmas bérletek, rejtett díjak nélkül. Csak edzés, szabadon.
+            </p>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Alkalmi -->
+            <div class="plan reveal">
+                <div class="plan-type">Alkalmi</div>
+                <div class="plan-price">2 500<sub> Ft</sub></div>
+                <div class="plan-period">egyszeri belépő</div>
+                <div class="plan-divider"></div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check-circle"></i> Open Gym hozzáférés</li>
+                    <li><i class="fas fa-check-circle"></i> Minden gép használata</li>
+                    <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
+                    <li class="off"><i class="fas fa-circle"></i> Csoportos órák</li>
+                    <li class="off"><i class="fas fa-circle"></i> Korlátlan látogatás</li>
+                </ul>
+                <a href="#contact" class="plan-btn">Bejelentkezés</a>
+            </div>
+
+            <!-- Havi – featured -->
+            <div class="plan featured reveal delay-1">
+                <div class="plan-badge">⭐ Legjobb ajánlat</div>
+                <div class="plan-type">Havi bérlet</div>
+                <div class="plan-price">12 900<sub> Ft</sub></div>
+                <div class="plan-period">/ hónap · nincs kötöttség</div>
+                <div class="plan-divider"></div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check-circle"></i> Korlátlan Open Gym</li>
+                    <li><i class="fas fa-check-circle"></i> Minden gép használata</li>
+                    <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
+                    <li><i class="fas fa-check-circle"></i> 2 csoportos óra / hó</li>
+                    <li><i class="fas fa-check-circle"></i> 1 ingyenes vendég / hó</li>
+                </ul>
+                <a href="#contact" class="plan-btn">Bérlet vásárlása</a>
+            </div>
+
+            <!-- Éves -->
+            <div class="plan reveal delay-2">
+                <div class="plan-type">Éves bérlet</div>
+                <div class="plan-price">9 900<sub> Ft</sub></div>
+                <div class="plan-period">/ hónap · éves fizetés</div>
+                <div class="plan-divider"></div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check-circle"></i> Korlátlan Open Gym</li>
+                    <li><i class="fas fa-check-circle"></i> Minden gép használata</li>
+                    <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
+                    <li><i class="fas fa-check-circle"></i> Korlátlan csoportos óra</li>
+                    <li><i class="fas fa-check-circle"></i> 10% kedvezmény PT-re</li>
+                </ul>
+                <a href="#contact" class="plan-btn">Bérlet vásárlása</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SCHEDULE
+============================================================ -->
+<section class="schedule" id="schedule">
+    <div class="container">
+        <div class="section-tag reveal">Órarend</div>
+        <h2 class="section-title reveal">HETI PROGRAM</h2>
+        <p class="section-subtitle reveal" style="max-width:600px;">
+            Az Open Gym <strong>minden nap 05:00–22:00-ig</strong> elérhető. 
+            A csoportos foglalkozások előzetes regisztrációhoz kötöttek.
+        </p>
+
+        <div class="booked-widget reveal">
+            <iframe src="https://physiosarvar.booked4.us/Calendar/Calendar/3"
+                    frameborder="0"
+                    scrolling="auto"
+                    width="100%"
+                    height="800"
+                    style="border:none; border-radius:12px; display:block;">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+============================================================ -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="test-head">
+            <div class="section-tag reveal">Vélemények</div>
+            <h2 class="section-title reveal">MIT MONDANAK TAGJAINK</h2>
+        </div>
+
+        <div class="test-grid">
+            <div class="test-card reveal">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="test-quote">
+                    „Fantasztikus hely! A berendezés modern, mindig tiszta és rendezett. 
+                    Az edzőterem légköre motiváló, a személyzet pedig rendkívül segítőkész. 
+                    Csak ajánlani tudom mindenkinek!"
+                </p>
+                <div class="test-author">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&q=80&auto=format&fit=crop&crop=face" alt="Kovács Péter" class="test-avatar">
+                    <div>
+                        <div class="test-name">Kovács Péter</div>
+                        <div class="test-since">Tag 2024 júliustól</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card reveal delay-1">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="test-quote">
+                    „A korai nyitvatartás életmentő! 5 órakor már edzhetek, 
+                    mielőtt munkába megyek. A géppark kiváló, mindent megtalálok 
+                    amire szükségem van. Nagyon elégedett vagyok!"
+                </p>
+                <div class="test-author">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&q=80&auto=format&fit=crop&crop=face" alt="Nagy Eszter" class="test-avatar">
+                    <div>
+                        <div class="test-name">Nagy Eszter</div>
+                        <div class="test-since">Tag 2024 szeptembertől</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card reveal delay-2">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="test-quote">
+                    „A csoportos edzések abszolút kedvenceim! Kiváló oktatók, 
+                    motiváló közeg és mindig jó hangulat. Sárvár legjobb edzőterme 
+                    — ezt mindenki megérdemli!"
+                </p>
+                <div class="test-author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&q=80&auto=format&fit=crop&crop=face" alt="Tóth Máté" class="test-avatar">
+                    <div>
+                        <div class="test-name">Tóth Máté</div>
+                        <div class="test-since">Tag 2024 augusztustól</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     CTA BANNER
+============================================================ -->
+<section class="cta-banner">
+    <div class="container cta-content">
+        <div class="section-tag reveal" style="justify-content:center;">Csatlakozz hozzánk</div>
+        <h2 class="reveal">KEZDD EL MA,<br><em>NE HOLNAP</em></h2>
+        <p class="reveal">
+            Ne halogasd tovább! Az első lépés a legfontosabb. 
+            Regisztrálj most és már holnap 05:00-tól edzhetsz Sárvár legjobb edzőtermében.
+        </p>
+        <div class="cta-actions reveal">
+            <a href="#contact" class="btn-primary">
+                <i class="fas fa-bolt"></i>
+                Regisztrálj most ingyen
+            </a>
+            <a href="tel:+36703191554" class="btn-outline">
+                <i class="fas fa-phone"></i>
+                06 70 319 1554
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div style="margin-bottom: 60px;">
+            <div class="section-tag reveal">Kapcsolat</div>
+            <h2 class="section-title reveal">VEDD FEL VELÜNK<br>A KAPCSOLATOT</h2>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Info -->
+            <div class="contact-info">
+                <div class="c-item reveal">
+                    <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <div class="c-label">Cím</div>
+                        <div class="c-value">
+                            9600 Sárvár, Szaput sétány 2.<br>
+                            <small style="color:var(--gray);font-size:13px;">(Petőfi ltp. vége, volt Barneváli bolt)</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-item reveal delay-1">
+                    <div class="c-icon"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <div class="c-label">Telefon</div>
+                        <div class="c-value">
+                            <a href="tel:+36703191554">06 70 319 1554</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-item reveal delay-2">
+                    <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <div class="c-label">E-mail</div>
+                        <div class="c-value">
+                            <a href="mailto:office@physiosarvar.hu">office@physiosarvar.hu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-item reveal delay-3">
+                    <div class="c-icon"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <div class="c-label">Nyitvatartás</div>
+                        <div class="hours-table">
+                            <div class="hours-row">
+                                <span class="day">Hétfő – Vasárnap</span>
+                                <span class="time">05:00 – 22:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="f-group">
+                        <label for="name">Neved *</label>
+                        <input type="text" id="name" name="name" placeholder="Kovács Péter" required>
+                    </div>
+                    <div class="f-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" placeholder="pelda@email.hu" required>
+                    </div>
+                </div>
+                <div class="f-group">
+                    <label for="phone">Telefonszám</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+36 XX XXX XXXX">
+                </div>
+                <div class="f-group">
+                    <label for="topic">Érdeklődés tárgya</label>
+                    <select id="topic" name="topic">
+                        <option value="">Válassz témát...</option>
+                        <option>Open Gym bérlet</option>
+                        <option>Csoportos edzések</option>
+                        <option>Személyi edzés</option>
+                        <option>Árak és bérletek</option>
+                        <option>Egyéb kérdés</option>
+                    </select>
+                </div>
+                <div class="f-group">
+                    <label for="message">Üzeneted *</label>
+                    <textarea id="message" name="message" placeholder="Írd meg kérdésedet..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="align-self:flex-start;">
+                    Üzenet küldése <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     MAP
+============================================================ -->
+<div class="map-wrap">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2707.8!2d16.9411!3d47.2474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476862c12c0ce8b7%3A0x400c8a21a5b9a0!2zU8OhcnbDoXIsIFN6YXB1dCBzw6l0w6FueSAyLCA5NjAw!5e0!3m2!1shu!2shu!4v1234567890"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="PhysioSárvár térkép"
+    ></iframe>
+</div>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <a href="#" class="f-logo">PHYSIO<em>SÁRVÁR</em></a>
+                <p class="f-desc">
+                    Sárvár legnagyobb gépesített edzőterme 500 m²-en. 
+                    Edz szabadon — minden nap 05:00 – 22:00 között.
+                </p>
+                <div class="socials">
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <div class="f-heading">Navigáció</div>
+                <ul class="f-links">
+                    <li><a href="#about">Rólunk</a></li>
+                    <li><a href="#classes">Foglalkozások</a></li>
+                    <li><a href="#gallery">Galéria</a></li>
+                    <li><a href="#pricing">Árak</a></li>
+                    <li><a href="#schedule">Órarend</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="f-heading">Foglalkozások</div>
+                <ul class="f-links">
+                    <li><a href="#classes">Open Gym</a></li>
+                    <li><a href="#classes">Csoportos Edzés</a></li>
+                    <li><a href="#classes">Személyi Edzés</a></li>
+                    <li><a href="#schedule">Jóga</a></li>
+                    <li><a href="#schedule">HIIT</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="f-heading">Elérhetőség</div>
+                <ul class="f-links">
+                    <li><a href="tel:+36703191554">06 70 319 1554</a></li>
+                    <li><a href="mailto:office@physiosarvar.hu">office@physiosarvar.hu</a></li>
+                    <li><a href="#">Sárvár, Szaput sétány 2.</a></li>
+                    <li><a href="#">Nyitva: 05:00 – 22:00</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>© 2025 PhysioSárvár. Minden jog fenntartva.</div>
+            <div style="display:flex;gap:20px;">
+                <a href="#" style="color:inherit;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">Adatvédelmi nyilatkozat</a>
+                <a href="#" style="color:inherit;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">Impresszum</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
