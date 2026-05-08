@@ -173,14 +173,13 @@ logo {
 .logo-icon {
     height: 40px;
     width: auto;
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
 }
 .logo-text-img {
+    padding-top:5px;
     height: 40px;
     width: auto;
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
 }
 .nav-links {
     display: flex;
