@@ -163,15 +163,23 @@ a   { color: inherit; }
     justify-content: space-between;
 }
 
-.logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 26px;
-    letter-spacing: 3px;
+logo {
+    display: flex;
+    align-items: center;
+    gap: 0px;
     text-decoration: none;
-    color: var(--white);
 }
-.logo em { color: var(--accent); font-style: normal; }
-
+.logo-icon {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+.logo-text-img {
+    margin-top:5px;
+    height: 40px;
+    width: auto;
+    display: block;
+}
 .nav-links {
     display: flex;
     align-items: center;
