@@ -163,7 +163,7 @@ a   { color: inherit; }
     justify-content: space-between;
 }
 
-logo {
+.logo {
     display: inline-flex !important;
     flex-direction: row !important;
     align-items: center;
