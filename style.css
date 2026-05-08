@@ -164,7 +164,7 @@ a   { color: inherit; }
 }
 
 logo {
-    display: flex !important;
+    display: inline-flex !important;
     flex-direction: row !important;
     align-items: center;
     gap: 0px;
@@ -173,13 +173,14 @@ logo {
 .logo-icon {
     height: 40px;
     width: auto;
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
 }
 .logo-text-img {
-    margin-top:5px;
     height: 40px;
     width: auto;
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
 }
 .nav-links {
     display: flex;
