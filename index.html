@@ -9,10 +9,13 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -31,6 +34,7 @@
     <a href="#pricing"     onclick="closeMobile()">Árak</a>
     <a href="#schedule"    onclick="closeMobile()">Órarend</a>
     <a href="#contact"     onclick="closeMobile()">Kapcsolat</a>
+    <a href="#schedule"    onclick="closeMobile()" class="mobile-cta">Időpontfoglalás</a>
 </div>
 
 <!-- ============================================================
@@ -66,7 +70,7 @@
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-        <div class="hero-eyebrow">Sárvár Legnagyobb Edzőterme</div>
+        <!--<div class="hero-eyebrow">Sárvár Legnagyobb Edzőterme</div>-->
         <h1 class="hero-title">
             EDDZ<br><em>SZABADON</em><br><span class="outline">MINDEN NAP</span>
         </h1>
@@ -77,7 +81,7 @@
         <div class="hero-actions">
             <a href="#pricing" class="btn-primary">
                 <i class="fas fa-ticket"></i>
-                Bérletek &amp; Árak
+                Árak
             </a>
             <a href="#about" class="btn-outline">
                 <i class="fas fa-play"></i>
@@ -86,10 +90,6 @@
         </div>
     </div>
 
-    <div class="scroll-hint">
-        <span>Görgess</span>
-        <div class="line"></div>
-    </div>
 </section>
 
 <!-- ============================================================
@@ -110,8 +110,8 @@
             <div class="stat-lbl">Nap / Hetente</div>
         </div>
         <div class="stat-cell">
-            <div class="stat-num">60+</div>
-            <div class="stat-lbl">Gép &amp; Eszköz</div>
+            <div class="stat-num">40+</div>
+            <div class="stat-lbl">Gép és eszköz</div>
         </div>
     </div>
 </div>
@@ -124,36 +124,28 @@
         <div class="about-grid">
             <div class="about-visual reveal">
                 <img
-                    src="https://images.unsplash.com/photo-1534438327859-4244b6b4e370?w=900&q=85&auto=format&fit=crop"
+                    src="terem1.jpg?w=400&q=80&auto=format&fit=crop"
                     alt="PhysioSárvár edzőterem belső"
                     class="about-img-main"
                 >
-                <img
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80&auto=format&fit=crop"
-                    alt="Súlyzók"
-                    class="about-img-float"
-                >
-                <div class="about-badge">
-                    <div class="about-badge-num">2024</div>
-                    <div class="about-badge-txt">Open Gym megnyitó</div>
-                </div>
             </div>
 
             <div class="about-text">
                 <div class="section-tag reveal">Rólunk</div>
-                <h2 class="section-title reveal">SÁRVÁR LEGJOBB<br>EDZŐTERME</h2>
+                <h2 class="section-title reveal">SÁRVÁR LEGNAGYOBB<br>EDZŐTERME</h2>
                 <p class="section-subtitle reveal">
                     2024 júliustól egy teljesen felújított, 500 m²-es edzőteremmel várjuk tagjainkat. 
                     Modern géppark, profi csoportos foglalkozások, és olyan nyitvatartás, 
                     ami tényleg igazodik az életedhez.
                 </p>
 
-                <div class="features-list">
+                <div class="features-list-wrap">
+                <div class="features-list" id="featuresList">
                     <div class="feat reveal delay-1">
                         <div class="feat-icon"><i class="fas fa-dumbbell"></i></div>
                         <div>
                             <div class="feat-h">Modern Géppark</div>
-                            <div class="feat-p">60+ korszerű kardió és erőgép, szabad súlyok és funkcionális edzőterület, kezdőktől profikig mindenki számára tökéletes.</div>
+                            <div class="feat-p">40+ korszerű kardió és erőgép, szabad súlyok és funkcionális edzőterület, kezdőktől profikig mindenki számára tökéletes.</div>
                         </div>
                     </div>
                     <div class="feat reveal delay-2">
@@ -178,9 +170,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                <div class="features-dots" id="featuresDots"></div>
+                </div><!-- /.features-list-wrap -->
+            </div><!-- /.about-text -->
+        </div><!-- /.about-grid -->
+    </div><!-- /.container -->
 </section>
 
 <!-- ============================================================
@@ -196,7 +190,8 @@
             <a href="#schedule" class="btn-outline reveal">Teljes órarend <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <div class="classes-grid">
+        <div class="classes-grid-wrap">
+        <div class="classes-grid" id="classesGrid">
             <div class="class-card reveal">
                 <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=700&q=85&auto=format&fit=crop" alt="Open Gym">
                 <div class="class-card-overlay"></div>
@@ -218,7 +213,7 @@
                     <div class="class-name">CSOPORTOS EDZÉS</div>
                     <div class="class-meta">
                         <i class="fas fa-users"></i> Max. 15 fő &nbsp;&bull;&nbsp;
-                        <i class="fas fa-stopwatch"></i> 45–60 perc
+                        <i class="fas fa-stopwatch"></i> 60 perc
                     </div>
                 </div>
             </div>
@@ -230,12 +225,14 @@
                     <div class="class-tag">Prémium</div>
                     <div class="class-name">SZEMÉLYI EDZÉS</div>
                     <div class="class-meta">
-                        <i class="fas fa-user-check"></i> 1-on-1 &nbsp;&bull;&nbsp;
-                        <i class="fas fa-stopwatch"></i> 60–90 perc
+                        <i class="fas fa-user-check"></i> Egyéni &nbsp;&bull;&nbsp;
+                        <i class="fas fa-stopwatch"></i> 60 perc
                     </div>
                 </div>
             </div>
-        </div>
+        </div><!-- /.classes-grid -->
+        <div class="classes-dots" id="classesDots"></div>
+        </div><!-- /.classes-grid-wrap -->
     </div>
 </section>
 
@@ -253,7 +250,7 @@
                 <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=1000&q=85&auto=format&fit=crop" alt="Gym floor">
             </div>
             <div class="g-item reveal delay-1">
-                <img src="https://images.unsplash.com/photo-1483721310020-03d1b92b3b73?w=700&q=85&auto=format&fit=crop" alt="Workout">
+                <img src="terem2.png?w=700&q=85&auto=format&fit=crop" alt="Workout">
             </div>
             <div class="g-item reveal delay-2">
                 <img src="https://images.unsplash.com/photo-1544033527-b192daee1f5b?w=700&q=85&auto=format&fit=crop" alt="Dumbbells">
@@ -262,7 +259,7 @@
                 <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=700&q=85&auto=format&fit=crop" alt="Machines">
             </div>
             <div class="g-item reveal delay-2">
-                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=700&q=85&auto=format&fit=crop" alt="Dark gym">
+                <img src="terem3.png?w=700&q=85&auto=format&fit=crop" alt="Dark gym">
             </div>
         </div>
     </div>
@@ -281,55 +278,148 @@
             </p>
         </div>
 
-        <div class="pricing-grid">
-            <!-- Alkalmi -->
-            <div class="plan reveal">
-                <div class="plan-type">Alkalmi</div>
-                <div class="plan-price">1 500<sub> Ft</sub></div>
-                <div class="plan-period">egyszeri belépő</div>
-                <div class="plan-divider"></div>
-                <ul class="plan-features">
-                    <li><i class="fas fa-check-circle"></i> Open Gym hozzáférés</li>
-                    <li><i class="fas fa-check-circle"></i> Minden gép használata</li>
-                    <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
-                    <li class="off"><i class="fas fa-circle"></i> Csoportos órák</li>
-                    <li class="off"><i class="fas fa-circle"></i> Korlátlan látogatás</li>
-                </ul>
-                <a href="#contact" class="plan-btn">Bejelentkezés</a>
-            </div>
+        <!-- Tab gombok -->
+        <div class="pricing-tabs">
+            <button class="pricing-tab active" onclick="switchPricingTab('berlet', this)">Bérletek</button>
+            <button class="pricing-tab " onclick="switchPricingTab('alkalmi', this)">Alkalmi jegyek</button>
+        </div>
 
-            <!-- Havi – featured -->
-            <div class="plan featured reveal delay-1">
-                <div class="plan-badge">⭐ Legjobb ajánlat</div>
-                <div class="plan-type">Folyamatos bérlet</div>
-                <div class="plan-price">14 000<sub> Ft</sub></div>
-                <div class="plan-period">/ hónap · nincs kötöttség</div>
-                <div class="plan-divider"></div>
-                <ul class="plan-features">
-                    <li><i class="fas fa-check-circle"></i> Korlátlan Open Gym</li>
-                    <li><i class="fas fa-check-circle"></i> Minden gép használata</li>
-                    <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
-                    <li><i class="fas fa-check-circle"></i> 2 csoportos óra / hó</li>
-                    <li><i class="fas fa-check-circle"></i> 1 ingyenes vendég / hó</li>
-                </ul>
-                <a href="#contact" class="plan-btn">Bérlet vásárlása</a>
-            </div>
+        <!-- Bérletek panel -->
+        <div class="pricing-panel" id="panel-berlet">
+            <div class="berlet-wrap">
+            <div class="pricing-grid" id="berletGrid">
 
-            <!-- Éves -->
-            <div class="plan reveal delay-2">
-                <div class="plan-type">Első havi bérlet</div>
-                <div class="plan-price">15 000<sub> Ft</sub></div>
-                <div class="plan-period">/ hónap · próbáld ki</div>
-                <div class="plan-divider"></div>
-                <ul class="plan-features">
-                    <li><i class="fas fa-check-circle"></i> Korlátlan Open Gym</li>
-                    <li><i class="fas fa-check-circle"></i> Minden gép használata</li>
-                    <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
-                    <li><i class="fas fa-check-circle"></i> Korlátlan csoportos óra</li>
-                    <li><i class="fas fa-check-circle"></i> 10% kedvezmény PT-re</li>
-                </ul>
-                <a href="#contact" class="plan-btn">Bérlet vásárlása</a>
+                <!-- Havi bérlet -->
+                <div class="plan reveal">
+                    <div class="plan-type">Havi bérlet</div>
+                    <div class="plan-price">15 000<sub> Ft</sub></div>
+                    <div class="plan-period">következő hónap azonos napjáig érvényes</div>
+                    <div class="plan-divider"></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check-circle"></i> Korlátlan Open Gym</li>
+                        <li><i class="fas fa-check-circle"></i> Minden gép használata</li>
+                        <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
+                        <li><i class="fas fa-check-circle"></i> Csoportos órák</li>
+                    </ul>
+                </div>
+
+                <!-- Láncbérlet – featured -->
+                <div class="plan featured reveal delay-1">
+                    <div class="plan-badge">⭐ Legjobb ajánlat</div>
+                    <div class="plan-type">Láncbérlet</div>
+                    <div class="plan-price">14 000<sub> Ft</sub></div>
+                    <div class="plan-period">következő hónap azonos napjáig érvényes</div>
+                    <div class="plan-divider"></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check-circle"></i> Korlátlan Open Gym</li>
+                        <li><i class="fas fa-check-circle"></i> Minden gép használata</li>
+                        <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
+                        <li><i class="fas fa-check-circle"></i> Csoportos órák</li>
+                        <li><i class="fas fa-check-circle"></i> Mindig hónap azonos napján indul</li>
+                        <li><i class="fas fa-check-circle"></i> Megújítás lejárat előtt szükséges</li>
+                        <li><i class="fas fa-check-circle"></i> Évente egyszer indítható</li>
+                    </ul>
+                </div>
+
+                <!-- Mentor bérlet -->
+                <div class="plan reveal delay-2">
+                    <div class="plan-type">Mentor bérlet</div>
+                    <div class="plan-price">20 000<sub> Ft</sub></div>
+                    <div class="plan-period">következő hónap azonos napjáig érvényes</div>
+                    <div class="plan-divider"></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check-circle"></i> Korlátlan Open Gym</li>
+                        <li><i class="fas fa-check-circle"></i> Minden gép használata</li>
+                        <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
+                        <li><i class="fas fa-check-circle"></i> Csoportos órák</li>
+                        <li><i class="fas fa-check-circle"></i> Személyre szabott edzésterv</li>
+                        <li><i class="fas fa-check-circle"></i> Önálló végrehajtással</li>
+                    </ul>
+                </div>
+
+            </div><!-- /.pricing-grid -->
+            <div class="berlet-dots" id="berletDots"></div>
+            </div><!-- /.berlet-wrap -->
+        </div>
+
+        <!-- Alkalmi jegyek panel -->
+        <div class="pricing-panel" id="panel-alkalmi" style="display:none;">
+            <div class="alkalmi-carousel-wrap">
+                <button class="carousel-arrow carousel-arrow--left" onclick="shiftCarousel(-1)" aria-label="Előző">&#8592;</button>
+                <div class="carousel-viewport">
+                <div class="alkalmi-carousel" id="alkalmiCarousel">
+
+                    <!-- Napijegy -->
+                    <div class="plan alkalmi-card">
+                        <div class="plan-type">Napijegy</div>
+                        <div class="plan-price">2 000<sub> Ft</sub></div>
+                        <div class="plan-period">adott napra érvényes</div>
+                        <div class="plan-divider"></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> Open Gym hozzáférés</li>
+                            <li><i class="fas fa-check-circle"></i> Minden gép használata</li>
+                            <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
+                        </ul>
+                    </div>
+
+                    <!-- Nagy csoportos óra -->
+                    <div class="plan alkalmi-card">
+                        <div class="plan-type">Nagy csoportos óra</div>
+                        <div class="plan-price">2 500<sub> Ft</sub></div>
+                        <div class="plan-period">vagy 17 000 Ft · 8 alkalom · 5 hétig érvényes</div>
+                        <div class="plan-divider"></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> Csoportos foglalkozás</li>
+                            <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
+                            <li><i class="fas fa-check-circle"></i> 8 alkalmas bérlet opció</li>
+                        </ul>
+                    </div>
+
+                    <!-- Kis csoportos óra -->
+                    <div class="plan alkalmi-card">
+                        <div class="plan-type">Kis csoportos óra</div>
+                        <div class="plan-price">3 000<sub> Ft</sub></div>
+                        <div class="plan-period">vagy 20 000 Ft · 8 alkalom · 5 hétig érvényes</div>
+                        <div class="plan-divider"></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> Kiscsoportos foglalkozás</li>
+                            <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
+                            <li><i class="fas fa-check-circle"></i> 8 alkalmas bérlet opció</li>
+                        </ul>
+                    </div>
+
+                    <!-- Félprivát órák -->
+                    <div class="plan alkalmi-card">
+                        <div class="plan-type">Félprivát óra</div>
+                        <div class="plan-price">3 500<sub> Ft</sub></div>
+                        <div class="plan-period">vagy 24 000 Ft · 8 alkalom · 5 hétig érvényes</div>
+                        <div class="plan-divider"></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> Félprivát foglalkozás</li>
+                            <li><i class="fas fa-check-circle"></i> Öltöző &amp; zuhanyzó</li>
+                            <li><i class="fas fa-check-circle"></i> 8 alkalmas bérlet opció</li>
+                        </ul>
+                    </div>
+
+                    <!-- Személyi edzés -->
+                    <div class="plan alkalmi-card">
+                        <div class="plan-type">Személyi edzés</div>
+                        <div class="plan-price" style="font-size:36px;line-height:1.1;">Érdeklődj<br>az edzőknél</div>
+                        <div class="plan-period">személyre szabott árazás</div>
+                        <div class="plan-divider"></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> Személyi edzés</li>
+                            <li><i class="fas fa-check-circle"></i> Egyéb speciális órák</li>
+                            <li><i class="fas fa-check-circle"></i> Egyéni árajánlat</li>
+                        </ul>
+                    </div>
+
+                </div>
+                </div><!-- /.carousel-viewport -->
+                <button class="carousel-arrow carousel-arrow--right" onclick="shiftCarousel(1)" aria-label="Következő">&#8594;</button>
             </div>
+            <!-- Carousel dots -->
+            <div class="carousel-dots" id="carouselDots"></div>
         </div>
     </div>
 </section>
@@ -370,55 +460,49 @@
 
         <div class="test-grid">
             <div class="test-card reveal">
-                <div class="stars">
+                <!--<div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
+                </div>-->
                 <p class="test-quote">
-                    „Fantasztikus hely! A berendezés modern, mindig tiszta és rendezett. 
-                    Az edzőterem légköre motiváló, a személyzet pedig rendkívül segítőkész. 
-                    Csak ajánlani tudom mindenkinek!"
+                    "„Leírás""
                 </p>
                 <div class="test-author">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&q=80&auto=format&fit=crop&crop=face" alt="Kovács Péter" class="test-avatar">
+                    <img src=" " alt=" " class="test-avatar">
                     <div>
-                        <div class="test-name">Kovács Péter</div>
-                        <div class="test-since">Tag 2024 júliustól</div>
+                        <div class="test-name">Név</div>
+                        <div class="test-since">...</div>
                     </div>
                 </div>
             </div>
 
             <div class="test-card reveal delay-1">
-                <div class="stars">
+                <!--<div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
+                </div>-->
                 <p class="test-quote">
-                    „A korai nyitvatartás életmentő! 5 órakor már edzhetek, 
-                    mielőtt munkába megyek. A géppark kiváló, mindent megtalálok 
-                    amire szükségem van. Nagyon elégedett vagyok!"
+                    "„Leírás""
                 </p>
                 <div class="test-author">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&q=80&auto=format&fit=crop&crop=face" alt="Nagy Eszter" class="test-avatar">
+                    <img src=" " alt=" " class="test-avatar">
                     <div>
-                        <div class="test-name">Nagy Eszter</div>
-                        <div class="test-since">Tag 2024 szeptembertől</div>
+                        <div class="test-name">Név</div>
+                        <div class="test-since">...</div>
                     </div>
                 </div>
             </div>
 
             <div class="test-card reveal delay-2">
-                <div class="stars">
+                <!--<div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
+                </div>-->
                 <p class="test-quote">
-                    „A csoportos edzések abszolút kedvenceim! Kiváló oktatók, 
-                    motiváló közeg és mindig jó hangulat. Sárvár legjobb edzőterme 
-                    — ezt mindenki megérdemli!"
+                    "„Leírás""
                 </p>
                 <div class="test-author">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&q=80&auto=format&fit=crop&crop=face" alt="Tóth Máté" class="test-avatar">
+                    <img src=" " alt=" " class="test-avatar">
                     <div>
-                        <div class="test-name">Tóth Máté</div>
-                        <div class="test-since">Tag 2024 augusztustól</div>
+                        <div class="test-name">Név</div>
+                        <div class="test-since">...</div>
                     </div>
                 </div>
             </div>
@@ -570,10 +654,8 @@
                     Edz szabadon — minden nap 05:00 – 22:00 között.
                 </p>
                 <div class="socials">
-                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/physiosarvar" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/physiosarvar" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div>
@@ -608,10 +690,10 @@
         </div>
 
         <div class="footer-bottom">
-            <div>© 2025 PhysioSárvár. Minden jog fenntartva.</div>
+            <div>© 2026 Physio FitStudio. Minden jog fenntartva.</div>
             <div style="display:flex;gap:20px;">
-                <a href="#" style="color:inherit;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">Adatvédelmi nyilatkozat</a>
-                <a href="#" style="color:inherit;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">Impresszum</a>
+                <!--<a href="#" style="color:inherit;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">Adatvédelmi nyilatkozat</a>
+                <a href="#" style="color:inherit;text-decoration:none;transition:color .25s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">Impresszum</a>-->
             </div>
         </div>
     </div>
